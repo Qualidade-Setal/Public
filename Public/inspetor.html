@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Quality</title>
+  <style>
+    body {
+      background-color: #f2f2f2;
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+    
+    h1 {
+      color: #333;
+      text-align: center;
+      padding: 20px 0;
+    }
+    
+    .container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+    }
+    
+    .button-container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      width: 100%;
+      max-width: 400px;
+      padding: 0 20px;
+    }
+    
+    .button {
+      margin-bottom: 10px;
+      padding: 20px;
+      border: none;
+      border-radius: 5px;
+      background-color: #4472C4;
+      color: white;
+      font-size: 18px;
+      text-align: center;
+      text-decoration: none;
+      cursor: pointer;
+      transition: background-color 0.3s;
+      width: 100%;
+      box-sizing: border-box;
+    }
+    
+    .button:hover {
+      background-color: #FF0000;
+    }
+    
+    .link-list {
+      display: none;
+      list-style-type: none;
+      padding: 0;
+      margin-top: 10px;
+      width: 100%;
+    }
+    
+    .link-list-item {
+      margin-bottom: 5px;
+    }
+
+    .link-list-item a {
+      display: block;
+      padding: 10px;
+      background-color: #fff;
+      color: #333;
+      border-radius: 5px;
+      text-decoration: none;
+      transition: background-color 0.3s;
+    }
+
+    .link-list-item a:hover {
+      background-color: #f2f2f2;
+    }
+    a{
+        color: white;
+        text-decoration: none;
+    }
+  </style>
+  <script>
+    document.addEventListener("DOMContentLoaded", function() {
+      var formulariosButton = document.getElementById("formulariosButton");
+      var formulariosList = document.getElementById("formulariosList");
+      var listasButton = document.getElementById("listasButton");
+      var listasList = document.getElementById("listasList");
+
+      formulariosButton.addEventListener("click", function() {
+        formulariosList.style.display = formulariosList.style.display === "none" ? "block" : "none";
+      });
+
+      listasButton.addEventListener("click", function() {
+        listasList.style.display = listasList.style.display === "none" ? "block" : "none";
+      });
+    });
+  </script>
+</head>
+<body>
+  <h1>Qualidade</h1>
+  <div class="container">
+    <div class="button-container">
+      <button id="formulario" class="button"><a href="Relatóriodiario.html">Relatório Diário</a></button>
+      <button id="formulariosButton" class="button">Formulários</button>
+      <ul id="formulariosList" class="link-list">
+        <li class="link-list-item"><a href="https://docs.google.com/spreadsheets/d/1jm3AreTD8WGc7uFytujELkMgrr4hR3aI/edit?usp=drive_link&ouid=113513470973557785098&rtpof=true&sd=true">Equipamentos Estáticos</a></li>
+        <li class="link-list-item"><a href="https://docs.google.com/spreadsheets/d/12z3r_G1evea6P6olM4YFXvXYO-cD0kpt/edit?usp=drive_link&ouid=113513470973557785098&rtpof=true&sd=true">Alinhamento e Nivelamento</a></li>
+        <li class="link-list-item"><a href="https://docs.google.com/spreadsheets/d/1pfJKpYJifiSe8vLvLyd9o71K6Iobe9ox/edit?usp=drive_link&ouid=113513470973557785098&rtpof=true&sd=true">Alinhamento final</a></li>
+        <li class="link-list-item"><a href="https://docs.google.com/spreadsheets/d/1fLkb6vcdsLhKhKfXxbWX7SD2tU5GX7OE/edit?usp=drive_link&ouid=113513470973557785098&rtpof=true&sd=true">Equipamentos Dinâmicos</a></li>
+        <li class="link-list-item"><a href="https://docs.google.com/spreadsheets/d/1DQJzNna4VVoffWPhMCu7waysSVq-0rz-/edit?usp=drive_link&ouid=113513470973557785098&rtpof=true&sd=true">Ângulo das Pás</a></li>
+        <li class="link-list-item"><a href="https://docs.google.com/spreadsheets/d/1P5lU2E7Hq3scXxRmtD_WWN8TKHpVrJCB/edit?usp=drive_link&ouid=113513470973557785098&rtpof=true&sd=true">Registro de Montagem da Torre</a></li>
+      </ul>
+      <button id="listasButton" class="button">Listas de Verificação</button>
+      <ul id="listasList" class="link-list">
+        <li class="link-list-item"><a href="https://docs.google.com/spreadsheets/d/1snX_mmzMlhd8tete52eDMewUJ33MQd1F/edit?usp=drive_link&ouid=113513470973557785098&rtpof=true&sd=true">Estruturas da Torre</a></li>
+      </ul>
+    </div>
+  </div>
+</body>
+</html>

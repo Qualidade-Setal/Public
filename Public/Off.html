@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Qualidade</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  <link rel="icon" href="icone.png">
+  <link rel="stylesheet" href="Index.css">
+  <link rel="Manifest" href="Manifest.json">
+</head>
+<body>
+  <h1>Qualidade</h1>
+  <img src="qualidade.png" alt="img">
+  <div class="container">
+    <div class="button-container">
+      <button id="inspector-button" class="button">Inspetor</button>
+      <a href="#" class="button">Lições Aprendidas</a>
+      <a href="PROJETOS.html" class="button">Projetos</a>
+      <a href="PROCEDIMENTOS.html" class="button">Procedimentos</a>
+      <a href="Indicadores.html" class="button">Indicadores</a>
+      <a href="Desvios.html" class="button">Desvios</a>
+      <a href="Calibração.html" class="button">Certificado de Calibração dos Instrumentos</a>
+    </div>
+  </div>
+
+  <!-- Caixa de diálogo -->
+  <div id="dialog" class="dialog-container">
+    <input id="name-input" class="dialog-input" type="text" placeholder="Matricula">
+    <button id="ok-button" class="dialog-button">OK</button>
+  </div>
+
+  <script>
+    var inspectorButton = document.getElementById('inspector-button');
+    var dialog = document.getElementById('dialog');
+    var nameInput = document.getElementById('name-input');
+    var okButton = document.getElementById('ok-button');
+  
+    inspectorButton.addEventListener('click', function() {
+      dialog.style.display = 'block';
+    });
+  
+    okButton.addEventListener('click', function() {
+      var name = nameInput.value.trim();
+      if (name !== '') {
+        if (name === '1393') {
+          alert('Bem-vindo Celsom!');
+          {
+          window.location.href = 'Inspetor.html';
+        } }
+        if (name === '13217') {
+          alert('Bem-vindo!');
+          {
+          window.location.href = 'Inspetor.html';
+        } 
+      } }
+        if (name === '13227') {
+          alert('Bem-vindo! Sr. Antônio');
+          {
+          window.location.href = 'Inspetor.html';
+        } 
+        }
+      }
+    );
+  </script>
+</body>
+</html>

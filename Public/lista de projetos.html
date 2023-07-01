@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html>
+<head>
+  
+ 
+<title>Projetos</title>
+  
+ 
+<meta name="viewport" content="width=device-width, initial-scale=1">
+  
+ 
+<style>
+   
+
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+
+    .header {
+      text-align: center;
+      padding: 20px;
+    }
+
+    .header img {
+      max-width: 100%;
+      height: auto;
+    }
+
+    .search-container {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    .search-container input {
+      padding: 5px;
+      font-size: 16px;
+    }
+
+    .search-container button {
+      padding: 5px 10px;
+      font-size: 16px;
+      background-color: #4472c4;
+      color: #ffffff;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    .link-list {
+      margin: 0 auto;
+      max-width: 400px;
+      padding: 0;
+      list-style: none;
+    }
+
+    .link-list li {
+      margin-bottom: 10px;
+    }
+
+    .link-list li a {
+      display: block;
+      padding: 10px;
+      background-color: #4472c4;
+      text-decoration: none;
+      color: #000000;
+      border-radius: 5px;
+    }
+
+    .link-list li a:hover {
+      background-color: #ff0000;
+    }
+
+    .hidden {
+      display: none;
+    }
+  </style>
+  <script>
+    function searchLinks() {
+      var input = document.getElementById('search-input');
+      var filter = input.value.toUpperCase();
+      var linkList = document.getElementById('link-list');
+      var links = linkList.getElementsByTagName('a');
+
+      for (var i = 0; i < links.length; i++) {
+        var link = links[i];
+        var linkText = link.textContent || link.innerText;
+
+        if (linkText.toUpperCase().indexOf(filter) > -1) {
+          link.style.display = '';
+          linkList.classList.remove('hidden');
+        } else {
+          link.style.display = 'none';
+        }
+      }
+    }
+
+    function showAlert(link) {
+      var documentName = link.textContent || link.innerText;
+      alert(documentName +   "  ATENÇÃO, ESTE DOCUMENTO NÃO PODE SER IMPRESSO OU BAIXADO. USO EXCLUSIVO PARA ESTA PLATAFORMA");
+    }
+  </script>
+</head>
+<body>
+  <div class="header">
+    <img src="Qualidade.png" alt="Logo">
+    <H1>PESQUISE O NOME OU O CÓDIGO DO PROJETO </H1>
+  </div>
+
+  <div class="search-container">
+    <input type="text" id="search-input" placeholder="Digite para pesquisar">
+    <button onclick="searchLinks(this)">Pesquisar</button>
+  </div>
+  <ul class="link-list hidden" id="link-list">
+    <li><a href="https://drive.google.com/file/d/1FfDv3XRdXCOy8DpTRiDltbtjJD_4sAgV/view?usp=drive_link" onclick="showAlert(this)">NTB1-TPP-SPG-01-02-CI-DE-0001-03</a></li>
+    <li><a href="https://drive.google.com/file/d/1seBFqD7AVXCYujXWqNWf7wmLI_LGsLim/view?usp=drive_link" onclick="showAlert(this)">NTB1-TPP-SPG-01-02-CI-MC-0001-03</a></li>
+    <li><a href="https://drive.google.com/file/d/1KvhFARoAE6zpzPUjGdbpLKuiPGPSry5P/view?usp=drive_link" onclick="showAlert(this)">NTB1-TPP-SPG-01-02-CI-MC-0002-03</a></li>
+    <li><a href="https://drive.google.com/file/d/1B4I8w2_-Mg17AoQLWphjdyNdsQF3Cedb/view?usp=drive_link" onclick="showAlert(this)">NTB1-TPP-SPG-01-02-CM-DI-0002-03</a></li>
+    <li><a href="https://drive.google.com/file/d/1WI4kLzMADtk4PThLFq10sk8zw2wn00Cg/view?usp=drive_link" onclick="showAlert(this)">NTB1-TPP-SPG-01-02-EL-DE-0001-02</a></li>
+    <li><a href="https://drive.google.com/file/d/1czujUmKT1-ah_SjBpFyHx7oYI878rO9p/view?usp=drive_link" onclick="showAlert(this)">NTB1-TPP-SPG-01-02-EL-FD-0001-03</a></li>
+    <li><a href="https://drive.google.com/file/d/1M1REWV31CnoweOTvI8JHRsHRfND6Ecyn/view?usp=drive_link" onclick="showAlert(this)">NTB1-TPP-SPG-01-02-EL-LM-0001-02</a></li>
+    <li><a href="https://drive.google.com/file/d/1fxXBWQMiYLADWj-es-PR0ivqyzLGq5Fv/view?usp=drive_link" onclick="showAlert(this)">NTB1-TPP-SPG-01-02-ES-DE-0001-03</a></li>
+    <li><a href="https://drive.google.com/file/d/1MM_zHx-y6yEmwwnZLeLZWRdPMbZThsXv/view?usp=drive_link" onclick="showAlert(this)">NTB1-TPP-SPG-01-02-ES-DE-0002-03</a></li>
+    <li><a href="https://drive.google.com/file/d/1_ZZhikpjJ4WenGvh3Y7wUIHeouvX2Rkj/view?usp=drive_link" onclick="showAlert(this)">NTB1-TPP-SPG-01-02-ES-DE-0003-03</a></li>
+    <li><a href="https://drive.google.com/file/d/1h22M_avPD6LZATOIzus8oRG2k2pxIuGP/view?usp=drive_link" onclick="showAlert(this)">NTB1-TPP-SPG-01-02-ES-DE-0004-03</a></li>
+    <li><a href="https://drive.google.com/file/d/1mfuUyv7PNwRfJPvNZZLQsXb2w6LBGxGA/view?usp=drive_link" onclick="showAlert(this)">NTB1-TPP-SPG-01-02-IS-DI-0002-02</a></li>
+    <li><a href="https://drive.google.com/file/d/1B_FEun5tGrrCfTni65laNE8dY8V1x8_F/view?usp=drive_link" onclick="showAlert(this)">NTB1-TPP-SPG-01-02-IS-FD-0001-02</a></li>
+    <li><a href="https://drive.google.com/file/d/1sYvKogZIyIsvx8fFkn8HgIyDUjVEtX84/view?usp=drive_link" onclick="showAlert(this)">NTB1-TPP-SPG-01-02-ME-DE-0001-03</a></li>
+    <li><a href="https://drive.google.com/file/d/1l_EGqjN2ZLycnABZWLIK3Rsa-Fzf_Nnq/view?usp=drive_link" onclick="showAlert(this)">NTB1-TPP-SPG-01-02-ME-DE-0007-01</a></li>
+    <li><a href="https://drive.google.com/file/d/1yfwsRCaay2ZFIz-iABI8DmJxYZPbrW08/view?usp=drive_link" onclick="showAlert(this)">NTB1-TPP-SPG-01-02-ME-DE-0008-03</a></li>
+    <li><a href="https://drive.google.com/file/d/1MSR_deWhvCNhPq7qKw7YBfBVDmeCJkI9/view?usp=drive_link" onclick="showAlert(this)">NTB1-TPP-SPG-01-02-ME-DE-0009-02</a></li>
+    <li><a href="https://drive.google.com/file/d/1XxYhUT-cnaRzthsMfv8EtnO2rI2BReyg/view?usp=drive_link" onclick="showAlert(this)">NTB1-TPP-SPG-01-02-ME-DE-0010-02</a></li>
+    <li><a href="https://drive.google.com/file/d/13-45Ha1E-eLUOx6nfudFFJS54eUE0f-k/view?usp=drive_link" onclick="showAlert(this)">NTB1-TPP-SPG-01-02-ME-DE-0011-02</a></li>
+    <li><a href="https://drive.google.com/file/d/1ncsOXjwhlw7couKudbQWln2CQehxwDU4/view?usp=drive_link" onclick="showAlert(this)">NTB1-TPP-SPG-01-02-ME-DE-0012-03</a></li>
+    <li><a href="https://drive.google.com/file/d/19OhlSnE_yJg2odZtu0y9G1pynovY9RfL/view?usp=drive_link" onclick="showAlert(this)">NTB1-TPP-SPG-01-02-ME-DE-0013-02</a></li>
+    <li><a href="https://drive.google.com/file/d/1MVBHbELcJPSQaFEbjbpgxoNcET2h19sk/view?usp=drive_link" onclick="showAlert(this)">NTB1-TPP-SPG-01-02-ME-DE-0015-03</a></li>
+    <li><a href="https://drive.google.com/file/d/1DmLUWrB79lqpbP7v_y1Dq0U_9-3lc_E2/view?usp=drive_link" onclick="showAlert(this)">NTB1-TPP-SPG-01-02-ME-DE-0018-01</a></li>
+    <li><a href="https://drive.google.com/file/d/1hZQkKdzzztfUKYs4mfuHlkHVO9vj7yGf/view?usp=drive_link" onclick="showAlert(this)">NTB1-TPP-SPG-01-02-ME-DE-0019-00</a></li>
+    <li><a href="https://drive.google.com/file/d/1hTn-POOfegK_IdxQmAJp8wyR6CxsvADJ/view?usp=drive_link" onclick="showAlert(this)">NTB1-TPP-SPG-01-02-ME-FD-0001-03</a></li>
+    <li><a href="https://drive.google.com/file/d/1YezM6oyPuy-0OmR1FzOVE4rC_98dRsCF/view?usp=drive_link" onclick="showAlert(this)">NTB1-TPP-SPG-01-02-ME-FD-0002-03</a></li>
+    <li><a href="https://drive.google.com/file/d/1QJaSw3uMI3y0Ydc2s4ZYO-w1qQ_3oZ8r/view?usp=drive_link" onclick="showAlert(this)">NTB1-TPP-SPG-01-02-ME-FD-0003-03</a></li>
+    <li><a href="https://drive.google.com/file/d/1dHW36L_nOvO-FjW7HnKX4EOWPcduP9S5/view?usp=drive_link" onclick="showAlert(this)">NTB1-TPP-SPG-01-02-ME-FD-0004-03</a></li>
+    <li><a href="https://drive.google.com/file/d/1pQ3Ft6ysAUr6vWseAJMoZ-eOqJ1AsvpV/view?usp=drive_link" onclick="showAlert(this)">NTB1-TPP-SPG-01-02-ME-FD-0005-03</a></li>
+    <li><a href="https://drive.google.com/file/d/1iKfCeGBc61QphGzRIhMN-BnBn_l2dxtm/view?usp=drive_link" onclick="showAlert(this)">NTB1-TPP-SPG-01-02-ME-LD-0001-02</a></li>
+    <li><a href="https://drive.google.com/file/d/1uDw_NDBemwDTjnHREGlW32IhVV_9Hdxm/view?usp=drive_link" onclick="showAlert(this)">NTB1-TPP-SPG-01-02-ME-LM-0001-02</a></li>
+    <li><a href="https://drive.google.com/file/d/1BE-CzyFDcEA_qvTHv6c6-zDLaeAbmfco/view?usp=drive_link" onclick="showAlert(this)">NTB1-TPP-SPG-01-02-ME-LM-0002-00</a></li>
+    <li><a href="https://drive.google.com/file/d/12T_4JYJH9X2N-V4SSO_z475YCJmIFj2a/view?usp=drive_link" onclick="showAlert(this)">NTB1-TPP-SPG-01-02-ME-MC-0001-02</a></li>
+    <li><a href="https://drive.google.com/file/d/17S7pVDkUqliCXFqLC8d3PO5wcpTaZ5nl/view?usp=drive_link" onclick="showAlert(this)">NTB1-TPP-SPG-01-02-PR-DI-0001-02</a></li>
+    <li><a href="https://drive.google.com/file/d/1Bg3JwogTuxVelLXi3FKjc12lZLn_Jdgn/view?usp=drive_link" onclick="showAlert(this)">NTB1-TPP-SPG-01-02-QA-LM-0001-03</a></li>
+    <li><a href="https://drive.google.com/file/d/1SiE1xBmtm5rV6a_8YtgewFSATrFX2uhz/view?usp=drive_link" onclick="showAlert(this)">NTB1-TPP-SPG-01-02-QA-MA-0001-00</a></li>
+    <li><a href="https://drive.google.com/file/d/1IZA2g8bi6nO08_M_FeH-xihCkf0v4r-3/view?usp=drive_link" onclick="showAlert(this)">NTB1-TPP-SPG-01-02-QA-PR-0001-01</a></li>
+    <li><a href="https://drive.google.com/file/d/1u_VHA6qOF70feg1nfK91YYoKNUq75aKh/view?usp=drive_link" onclick="showAlert(this)">NTB1-TPP-SPG-01-02-QA-PR-0002-01</a></li>
+  </ul>
+</body>
+</html>

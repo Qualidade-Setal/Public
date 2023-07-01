@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Certificados de Calibração</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+
+    h1 {
+      text-align: center;
+      margin-top: 20px;
+    }
+
+    .container {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 20px;
+    }
+
+    .filtro {
+      margin-bottom: 20px;
+    }
+
+    .filtro label {
+      font-weight: bold;
+      display: block;
+      margin-bottom: 5px;
+    }
+
+    .filtro input {
+      padding: 5px;
+      width: 100%;
+      max-width: 300px;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 20px;
+    }
+
+    th, td {
+      padding: 10px;
+      text-align: left;
+      border-bottom: 1px solid #ddd;
+    }
+
+    th {
+      background-color: #4472c4;
+      color: #fff;
+    }
+
+    .arquivo-link {
+      display: inline-block;
+      padding: 5px 10px;
+      background-color: #f2f2f2;
+      color: #333;
+      text-decoration: none;
+      border-radius: 4px;
+      transition: background-color 0.3s ease;
+    }
+
+    .arquivo-link:hover {
+      background-color: #ddd;
+    }
+
+    /* Responsividade para dispositivos móveis */
+    @media (max-width: 600px) {
+      .container {
+        padding: 10px;
+      }
+
+      .filtro input {
+        max-width: 100%;
+      }
+    }
+    img{
+      width: 300px;
+      align-self: center;
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Lista de Certificados de Calibração</h1>
+    <img src="qualidade.png" alt="img">
+    <br>
+    <div class="filtro">
+      <label for="filtro-input">Filtrar por descrição do equipamento:</label>
+      <input type="text" id="filtro-input">
+    </div>
+    <table id="certificados">
+      <thead>
+        <tr>
+          <th>Número do Certificado</th>
+          <th>Data de Calibração</th>
+          <th>Equipamento</th>
+          <th>Arquivo</th>
+        </tr>
+      </thead>
+      <tbody id="certificados-body">
+        <!-- Aqui serão inseridos os dados dinamicamente -->
+      </tbody>
+    </table>
+  </div>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", function() {
+      // Dados de exemplo - Certificados de Calibração
+      var certificados = [
+        { numero: "xxxxxx", data: "xxxxxx", descricao: "Torquímetro", arquivo: "caminho/para/arquivo1.pdf" },
+        { numero: "xxxxxx", data: "xxxxxx", descricao: "Trena", arquivo: "caminho/para/arquivo2.pdf" },
+        { numero: "xxxxxx", data: "xxxxxx", descricao: "Esquadro", arquivo: "caminho/para/arquivo3.pdf" }
+      ];
+
+      var certificadosBody = document.getElementById("certificados-body");
+      var filtroInput = document.getElementById("filtro-input");
+
+      // Função para preencher a tabela com os dados dos certificados
+      function popularTabela(certificadosFiltrados) {
+        certificadosBody.innerHTML = "";
+
+        certificadosFiltrados.forEach(function(certificado) {
+          var row = document.createElement("tr");
+          var numeroCell = document.createElement("td");
+          numeroCell.textContent = certificado.numero;
+          row.appendChild(numeroCell);
+
+          var dataCell = document.createElement("td");
+          dataCell.textContent = certificado.data;
+          row.appendChild(dataCell);
+
+          var descricaoCell = document.createElement("td");
+          descricaoCell.textContent = certificado.descricao;
+          row.appendChild(descricaoCell);
+
+          var arquivoCell = document.createElement("td");
+          var link = document.createElement("a");
+          link.href = certificado.arquivo;
+          link.textContent = "Visualizar";
+          arquivoCell.appendChild(link);
+          row.appendChild(arquivoCell);
+
+          certificadosBody.appendChild(row);
+        });
+      }
+
+      // Função para filtrar os certificados com base na descrição do equipamento
+      function filtrarCertificados(descricaoFiltro) {
+        var certificadosFiltrados = certificados.filter(function(certificado) {
+          return certificado.descricao.toLowerCase().includes(descricaoFiltro.toLowerCase());
+        });
+
+        popularTabela(certificadosFiltrados);
+      }
+
+      // Evento de digitação no campo de filtro
+      filtroInput.addEventListener("input", function() {
+        filtrarCertificados(this.value);
+      });
+
+      // Preencher tabela inicialmente com todos os certificados
+      popularTabela(certificados);
+    });
+  </script>
+</body>
+</html>
